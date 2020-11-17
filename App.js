@@ -6,12 +6,16 @@ import {createStackNavigator}from '@react-navigation/stack';
 
 const Stack = createStackNavigator()
 
+import AppointmentList from './screens/AppointmentList'
+import CreateAppointmentScreen from './screens/CreateAppointmentScreen'
+import AppointmentDetailScreen from './screens/AppointmentDetailScreen'
+
 function MyStack(){
   return(
     <Stack.Navigator>
-        <Stack.Screen/>
-        <Stack.Screen/>
-        <Stack.Screen/>
+        <Stack.Screen name="ListadeCitas" component={AppointmentList}/>
+        <Stack.Screen name="DetallesdeCitas" component={AppointmentDetailScreen}/>
+        <Stack.Screen name ="CrearCitas" component={CreateAppointmentScreen}/>
     </Stack.Navigator>
   )
 }
@@ -19,7 +23,7 @@ function MyStack(){
 export default function App() {
   return (
     <NavigationContainer>
-
+      <MyStack/>
     </NavigationContainer>
   );
 }
