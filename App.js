@@ -13,9 +13,10 @@ import AppointmentDetailScreen from './screens/AppointmentDetailScreen'
 function MyStack(){
   return(
     <Stack.Navigator>
-        <Stack.Screen name="ListadeCitas" component={AppointmentList}/>
-        <Stack.Screen name="DetallesdeCitas" component={AppointmentDetailScreen}/>
-        <Stack.Screen name ="CrearCitas" component={CreateAppointmentScreen}/>
+        <Stack.Screen name ="Create Medical Appointments" component={CreateAppointmentScreen}/> 
+        <Stack.Screen name="Medical Appointment List" component={AppointmentList}/>
+        <Stack.Screen name="Medical Appointment Details" component={AppointmentDetailScreen}/>
+        
     </Stack.Navigator>
   )
 }
